@@ -1,23 +1,20 @@
+import numpy as np
 import os
-import nibabel as nib
 
-def load_nifti(file_path):
-    img = nib.load(file_path)
-    return img.get_fdata().squeeze()
+def load_npz(file_path):
+    return np.load(file_path)
 
 
-def average_runs(data1, data2):
-    return ((data1 + data2) / 2).T
+def load_all_tasks(base_path):
+    tasks = [
+        "EMOTION", "GAMBLING", "LANGUAGE", "MOTOR",
+        "RELATIONAL", "REST1", "REST2", "SOCIAL", "WM"
+    ]
 
+    data = {}
 
-def extract_file_paths(base_path, file_path, exclude_ids):
-    paths = []
+    for task in tasks:
+        path = os.path.join(base_path, task, f"Variability_s200_{task}_LR.npz")
+        data[task] = np.load(path)
 
-    for subject in os.listdir(base_path):
-        if subject not in exclude_ids:
-            subj_path = os.path.join(base_path, subject, file_path)
-            if os.path.exists(subj_path):
-                for file in os.listdir(subj_path):
-                    if file.startswith('schaefer200'):
-                        paths.append(os.path.join(subj_path, file))
-    return paths
+    return data
