@@ -1,12 +1,22 @@
 from scipy.stats import pearsonr
 import numpy as np
 
-def compute_correlations(data, variable):
-    r_vals, p_vals = [], []
+def pearson1(entropie, variable): 
+    coefficient = []
+    p_values = []
 
-    for i in range(data.shape[0]):
-        r, p = pearsonr(variable, data[i])
-        r_vals.append(r)
-        p_vals.append(p)
+    entropie = entropie.T
 
-    return np.array(r_vals), np.array(p_vals)
+    for i in range(len(entropie)):  
+        correlation_coefficient, p_value = pearsonr(variable,entropie[i])
+        coefficient.append(correlation_coefficient)
+        p_values.append(p_value)
+
+    alpha = 0.05
+    reject_null, corrected_p_values, _, _ = multipletests(p_values, alpha=alpha, method='bonferroni')
+
+    mean_p_value = np.mean(p_values)
+
+    results = [p_values, corrected_p_values, mean_p_value]
+    
+    return results
