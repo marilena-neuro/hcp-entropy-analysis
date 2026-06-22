@@ -1,5 +1,6 @@
-from scipy.stats import pearsonr
 import numpy as np
+from scipy.stats import pearsonr
+from statsmodels.stats.multitest import multipletests
 
 def pearson1(entropie, variable): 
     coefficient = []
