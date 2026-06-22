@@ -50,7 +50,7 @@ https://www.humanconnectome.org
 
 ## Repository Structure
 - 'src/' > core analysis functions
-- 'notebooks/' > exploratory analysis & visualization
+- notebooks are numbered from 01 to xx (data analysis & visual exploration)
 - 'data/' > dataset structure (HCP data not included)
 - 'results/' > figures and outputs
 - 'reports/' > thesis and summary
