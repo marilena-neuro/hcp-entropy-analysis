@@ -42,7 +42,9 @@ This folder contains key results from the analysis of neural variability and com
 ## Example Visualizations
 
 ![Total Adjusted Intelligence Correlation](figures/correlations/total_adj.png)
+---
 ![Fuzzy Entropy Gender Difference Boxplot](figures/t_test/Gender_FE.png)
+---
 
 ## Full Study
 
