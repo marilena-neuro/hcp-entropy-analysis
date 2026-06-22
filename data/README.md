@@ -24,6 +24,7 @@ Dataset used:
 - Preprocessing was done by: Wehrheim, M. H., Faskowitz, J., Schubert, A. & Fiebach, C. J. (2024). Reliability of variabil-
 ity and complexity measures for task and task‐free BOLD fMRI. Human Brain Map-
 ping, 45(10). https://doi.org/10.1002/hbm.26778
+- Due to computational constraints, the veriability and entropy calculations were not entirely performed on local hardware. Preprocessed datasets used in this project were provided by a supervisor. However, the implemented functions in this repository demonstrate the full computation pipeline.
 
 ## Reproducing the Analysis
 
