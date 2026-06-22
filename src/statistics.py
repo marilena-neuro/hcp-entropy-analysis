@@ -43,3 +43,34 @@ def t_test(entropie, variable):
     results = [p_value_t_test, corrected_p_values, statistics, male_numbers, female_numbers]
 
     return results
+
+def whole_brain():
+
+    entropies = ['std_raw', 'roc_raw_squared', 'se', 'fe', 'mse']
+    durchgang = [rest1_s200, rest2_s200, emotion_s200, gambling_s200, language_s200, motor_s200, relational_s200, social_s200, wm_s200]
+    variables = [ages, fluid_Unadj, fluid_Adj, crystal_Unadj, crystal_Adj, total_Unadj, total_Adj]
+    
+    wholebrain = {}
+    for variable, variable_name in zip(variables, ['ages', 'fluid_Unadj', 'fluid_Adj', 'crystal_Unadj', 'crystal_Adj', 'total_Unadj', 'total_Adj']):
+        whole_brain_variables = {}
+        for item, item_name in zip(durchgang, ['rest1_s200', 'rest2_s200', 'emotion_s200', 'gambling_s200', 'language_s200', 'motor_s200', 'relational_s200', 'social_s200', 'wm_s200']): 
+            wholebrain_values = {}
+            for entropie in entropies: 
+
+                if item_name == 'emotion_s200' and entropie == 'mse':
+                    network_mean_data = np.nanmean(item[entropie], axis = 1)
+                else: 
+                    network_mean_data = np.nanmean(item[entropie], axis=1)
+                    
+                correlation, p_values = pearsonr(variable, network_mean_data)   
+                m = 5
+                corrected_p_values = p_values * m
+                corrected_p_values = min(corrected_p_values, 1.0)
+
+                wholebrain_values[entropie] = [[correlation], [p_values], [corrected_p_values]]
+                
+            whole_brain_variables[item_name] = wholebrain_values
+
+        wholebrain[variable_name] = whole_brain_variables
+
+    return wholebrain
