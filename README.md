@@ -58,7 +58,7 @@ https://www.humanconnectome.org
 - 'notebooks/' > exploratory analysis and visualizations
 - 'results/' > figures and outputs
 - 'reports/' > thesis
-- - 'data/' > dataset structure (HCP data not included)
+- 'data/' > dataset structure (HCP data not included)
 
 ## Reproducibility 
 Data used: 
