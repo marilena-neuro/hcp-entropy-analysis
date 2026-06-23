@@ -25,6 +25,15 @@ Then we analyse how these measures relate to:
 - Variability is higher in resting-state, entropy is higher during tasks
 - Cognitive variables show task-specific correlations
 
+### Correlations with Age
+![Whole-Brain Correlations with Variable Age](hcp-entropy-analysis/results/figures/Whole_brain_Age.png)
+
+### Gender Differences 
+![Differences in Gender across Whole-Brain Data](hcp-entropy-analysis/results/figures/Whole_brain_gender.png)
+
+### Total Intelligence Correlations in different brain networks
+![Total intelligence Correlations across brain networks](hcp-entropy-analysis/results/figures/sliced_total_intelligence.png)
+
 ## Methods
 
 ### Variability Measures
