@@ -28,8 +28,12 @@ Then we analyse how these measures relate to:
 ### Correlations with Age
 ![Whole-Brain Correlations with Variable Age](results/figures/Whole_brain_Age.png)
 
+---
+
 ### Gender Differences 
 ![Differences in Gender across Whole-Brain Data](results/figures/Whole_brain_gender.png)
+
+---
 
 ### Total Intelligence Correlations in different brain networks
 ![Total intelligence Correlations across brain networks](results/figures/sliced_total_intelligence.png)
