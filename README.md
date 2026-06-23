@@ -30,7 +30,7 @@ Then we analyse how these measures relate to:
 
 ---
 
-### Gender Differences 
+### Gender Differences across Tasks
 ![Differences in Gender across Whole-Brain Data](results/figures/Whole_brain_gender.png)
 
 ---
