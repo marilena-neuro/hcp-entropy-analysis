@@ -1,18 +1,23 @@
-# fMRI Variability and Complexity Analysis
-This project analyses fMRI data from the Human Connectome Project (HCP) and investigates neural variability and complexity. 
-
-The goal is to understand how these measures relate to individual traits such as age, intelligence or gender. 
+# fMRI Variability and Complexity Analysis of Human Connectome Data
+This project applies quantitative measures of variability and entropy to large-scale fMRI data from the Human Connectome Project (HCP) to investigate how brain dynamics relate to individual cognitive and demographic differences.
 
 ## Project Overview
-Brain variability is inherently variable and complex. This project explores two core concepts: 
+Brain signals are variable and complex as they refelct underlying cognitive processes. This project explores two core concepts: 
 - **Neural variability** (SD, MSSD)
 - **Neural complexity/entropy** (Sample Entropy, Fuzzy Entropy, Multiscale Entropy)
 
-Then we analyse how these measure relate to: 
+Then we analyse how these measures relate to: 
 - Age
 - Fluid intelligence
 - Crystallized intelligence
 - Gender
+
+## Tech Stack
+- Python
+- NumPy
+- pandas
+- SciPy
+- matplotlib/seaborn
 
 ## Key Results
 - Neural variability decreases with age
@@ -50,10 +55,10 @@ https://www.humanconnectome.org
 
 ## Repository Structure
 - 'src/' > core analysis functions
-- notebooks are numbered from 01 to xx (data analysis & visual exploration)
-- 'data/' > dataset structure (HCP data not included)
+- 'notebooks/' > exploratory analysis and visualizations
 - 'results/' > figures and outputs
-- 'reports/' > thesis and summary
+- 'reports/' > thesis
+- - 'data/' > dataset structure (HCP data not included)
 
 ## Reproducibility 
 Data used: 
